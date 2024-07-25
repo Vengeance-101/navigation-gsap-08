@@ -1,0 +1,186 @@
+@font-face {
+  font-family: myFont;
+  src: url("./Qeinsha.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: myFont;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100%;
+  background: black;
+  overflow: hidden;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+p {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.hero {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: url("./images/hero.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  overflow: hidden;
+  z-index: 0;
+}
+.hero .header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 0.5rem;
+}
+sup {
+  position: relative;
+  top: 0em;
+  color: white;
+  font-size: 3vw;
+}
+.hero h1 {
+  color: white;
+  font-size: 10vw;
+  text-transform: uppercase;
+  letter-spacing: -0.024em;
+  line-height: 100%;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  padding: 1.5em 2em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+.logo {
+  width: 50%;
+  color: white;
+  font-size: 2rem;
+}
+
+.menu-open,
+.menu-close {
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  &:hover {
+    letter-spacing: 5px;
+  }
+}
+.menu {
+  position: fixed;
+  top: 0;
+  padding: 1.5rem;
+  width: 100%;
+  height: 100vh;
+  background: #101010;
+  color: white;
+  display: flex;
+  gap: 1.5em;
+  overflow: hidden;
+  z-index: 2;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  overflow: hidden;
+}
+
+.menu-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 2em;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.menu-img {
+  position: relative;
+  flex: 3;
+  overflow: hidden;
+}
+.menu-items {
+  position: relative;
+  top: 0;
+  flex: 1;
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: -1;
+}
+
+.menu-img img {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+#img-1 {
+  opacity: 0.9;
+}
+#img-2 {
+  opacity: 0.7;
+}
+#img-3 {
+  opacity: 0.5;
+}
+#img-4 {
+  opacity: 0.3;
+}
+
+.menu-logo {
+  width: 50%;
+  font-size: 2rem;
+  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); */
+  position: relative;
+  opacity: 0;
+}
+
+.menu-link p {
+  position: relative;
+  font-size: 36px;
+  font-weight: 700;
+  opacity: 0;
+}
+
+.menu-link a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu-footer {
+  width: 100%;
+  display: flex;
+}
+
+.menu-sub-col {
+  flex: 1;
+}
+
+.menu-sub-item p {
+  position: relative;
+  opacity: 0;
+}
+
+.menu-link,
+.menu-sub-item {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
